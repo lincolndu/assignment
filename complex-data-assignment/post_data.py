@@ -34,7 +34,8 @@ post_data = [
         "id": 6,
         "title": "dolorem eum magni eos aperiam quia ",
         "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
-    }, ]
+    }
+]
 
 # Your Code Start from here
 
@@ -42,5 +43,13 @@ post_data = [
 
 
 # Your code ends here
-
-print(post_data[4])
+def slug(title):
+    return '-'.join(title.split()[:3])
+i = 0
+while i < len(post_data):
+    post_data[i]['slug'] =slug(post_data[i]['title'])
+    print(post_data[i])
+    i +=1
+    
+# post_data[0]['hello'] =slug(' Lincoln    stes  take took mah  ')
+# print(post_data[0])
